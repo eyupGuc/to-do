@@ -1,4 +1,4 @@
-const addBtn = document.querySelector("#todo-button");
+const addBtn = document.getElementById("todo-button");
 const todoInput = document.getElementById("todo-input");
 const todoUl = document.getElementById("todo-ul");
 
@@ -20,8 +20,9 @@ const createListElement = (newTodo) => {
 
   // li.id=newTodo.id
   li.setAttribute("id", newTodo.id);
-  console.log(li);
+
   const okIcon = document.createElement("i");
   okIcon.setAttribute("class", "fas fa-check");
   li.appendChild(okIcon);
+  todoUl.appendChild(li);
 };
